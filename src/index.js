@@ -8,6 +8,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Storeを作成する
 const history = History.createBrowserHistory();
 export const store = createStore(history);
 

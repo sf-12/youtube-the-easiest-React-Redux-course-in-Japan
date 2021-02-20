@@ -1,3 +1,4 @@
+// stateの初期値を設定しておく
 const initialState = {
   products: {
 

@@ -4,6 +4,8 @@ import {
   applyMiddleware
 } from 'redux';
 import { connectRouter, routerMiddleware } from "connected-react-router";
+// 非同期通信できるようにする
+import thunk from 'redux-thunk';
 
 // import reducers
 // import {ProductsReducer} from '../products/reducers';
@@ -17,7 +19,8 @@ export default function createStore(history) {
       users: UsersReducer
     }),
     applyMiddleware(
-      routerMiddleware(history)
+      routerMiddleware(history),
+      thunk
     )
   );
 }
